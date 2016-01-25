@@ -1,0 +1,70 @@
+div#body-title {
+  position : relative;
+  height : 2em;
+}
+div#body-title h1 {
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  margin : 0;
+  padding : 0;
+}
+div#body-title p#languages {
+  position : absolute;
+  right : 0;
+  bottom : 0;
+  margin : 0;
+  padding : 0;
+}
+
+div.links {
+  display : none;
+}
+div.body {
+  padding : 0;
+  margin-left : 4%;
+  margin-right : 4%;
+}
+
+table#content {
+  margin-left : 0.5em;
+  margin-right : 0.5em;
+  background : #ffffcc;
+}
+table#content a {
+  background-color : white;
+  color : blue;
+  border : 1px dotted blue;
+  padding : 1px;
+  text-decoration : none;
+  font-family : Verdana, "Bitstream Vera Sans", sans-serif;
+  font-size : 84%;
+}
+table#content a:visited {
+  color : purple;
+}
+table#content a:visited:hover {
+  background-color : purple;
+  color : white;
+}
+table#content a:hover {
+  background-color : blue;
+  color : white;
+}
+table#content li {
+  line-height : 1.44em;
+}
+table#content td {
+	margin : 0;
+	padding : 0.25em 0.5em;
+	width : 48%;
+}
+
+#advert {
+	text-align : center;
+}
+p.caption {
+	padding : 0;
+	margin : 0;
+	font-size : 92%;
+}

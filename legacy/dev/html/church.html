@@ -1,0 +1,54 @@
+<div class="church" id="p{{church.id}}">
+  <h3>{{church.name}}{% if church.alias %} ({{church.alias}}) {% endif %}</h3>
+  {% for day in days %}
+    {% if times[day.code] %}
+      <p class="times">{{day | day_format}}:
+      {% for time in times[day.code] %}
+        {{time | masstime_format | nl2br}}{% if not loop.last %},{% endif %}
+      {% endfor %}
+      </p>
+    {% endif %}
+  {% endfor %}
+
+  {% if confessions %}<p class="confessions"><span class="label">{{label_confession}}:</span>&nbsp;{{confessions | safe}}</p>{% endif %}
+
+  {%- if church.address or church.x_coord or church.latitude or church.map_link %}
+    <p class="address">
+    {% if church.map_link %}
+      <a href="http://{{church.map_link}}" class="map_link">{{churches_map_link}}</a><br />
+    {% elif church.latitude and church.longitude %}
+      <a href="{{url}}/{{language}}/map?lat={{church.latitude}}&lon={{church.longitude}}&zoom=14&church_id={{church.id}}">{{general_locate_on_map}}</a><br />
+    {% endif %}
+    {% if church.address %}
+      {{church.address}}{% if church.postcode and church.postcode != 'XXX' %}, {{church.postcode}} {% endif %}
+    {% endif %}
+    </p>
+  {% endif -%}
+
+  {% if church.directions %} <p class="directions">({{church.directions}})</p> {% endif %}
+  {% if church.phone %} <p class="telephone"><span class="label">{{label_phone}}:</span> {{church.phone | phone_format}}</p> {% endif %}
+  {% if church.public_transport %} <p class="transport"><span class="label">{{label_station}}:</span> {{church.public_transport}}</p> {% endif %}
+  {% if church.website %}
+    <p class="transport"><span class="label">{{label_website}}:</span> <a class="external" href="http://{{church.website}}">http://{{church.website}}</a></p>
+  {% endif %}
+  {% if church.email %}
+    <p class="transport"><span class="label">{{label_email}}:</span> <a class="church_link" href="mailto:{{church.email}}">{{church.email}}</a></p>
+  {% endif %}
+
+  {% if junctions %}
+    {% set comma = joiner (", ") %}
+    <p class="transport"><span class="label">{{label_junctions}}:</span>
+    {% for junction in junctions %}
+      {{ comma () }} {{junction.motorway}} {{junction.junction}}
+      {% if junction.distance %} ({{junction.miles}} {{distance_miles}}) {% endif %}
+    {% endfor %}
+    </p>
+  {% endif %}
+
+  <p class="last_updated_on">
+    {% if church.last_updated_on %} {{general_last_updated_on}} {{ church.last_updated_on | date_format}} {% endif %}
+    <a href="{{url}}/{{language}}/intouch?subject={{name.encode ('utf-8') | urlquote}}+{{'[%s]' % church.postcode if (church.postcode and church.postcode != 'XXX') else '' | urlquote}}">
+      {{general_report_corrections}}
+    </a>
+  </p>
+</div>

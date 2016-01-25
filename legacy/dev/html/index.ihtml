@@ -1,0 +1,78 @@
+<div id="header">
+  <p class="details">{{index_intro}}</p>
+</div>
+
+<table id="content" cellspacing="0">
+  <tr>
+    <td id="search">
+      <h2>{{index_search_title}}</h2>
+
+      <ul>
+        <li>{{index_search_find_with_map}}</li>
+        <li>
+          {{index_search_find}}
+          <form class="search" action="{{url}}/{{language}}/search" method="GET">
+            <input class="text_box" type="text" name="terms" />
+            <input class="go_button" type="submit" value="{{label_find}}">
+          </form>
+        </li>
+      </ul>
+    </td>
+
+    <td id="gb" rowspan="2">
+      <h2>{{index_gb_title}}</h2>
+
+      <ul>
+        <li>{{index_gb_weekday}}</li>
+        <li>{{index_gb_saturday}}</li>
+        <li>{{index_gb_sunday}}</li>
+        <li>{{index_gb_hdo}}</li>
+      </ul>
+
+      <ul>
+        <li>{{index_gb_postcode_distance}}</li>
+        <!--li>{{index_gb_motorways}}</li-->
+        <li>{{index_gb_postcodes}}</li>
+        <li>{{index_gb_shrines}}</li>
+        <li>{{index_gb_churches}}</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="worldwide">
+      <h2>{{index_worldwide_title}}</h2>
+
+      <ul>
+        <li>{{index_worldwide_weekday}}</li>
+        <li>{{index_worldwide_saturday}}</li>
+        <li>{{index_worldwide_sunday}}</li>
+        <li>{{index_worldwide_hdo}}</li>
+      </ul>
+
+      <ul>
+        <li>{{index_worldwide_airports}}</li>
+        <li>{{index_worldwide_resorts}}</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr><td id="general">
+    <h2>{{index_general_title}}</h2>
+
+    <ul id="general-items">
+      <li>{{index_general_links}}</li>
+      <li>{{index_general_contact}}</li>
+      <li>{{index_general_updated}}</li>
+      <!-- li>{{index_acknowledgements}}</li -->
+    </ul>
+  </td>
+  <td id="outro">{{index_outro}}</td>
+  </tr>
+
+</table>
+
+<div id="footer">
+  <p class="details"></p>
+</div>
+

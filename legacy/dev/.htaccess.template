@@ -1,0 +1,26 @@
+<IfModule mod_security.c>
+  SecFilterEngine On
+</IfModule>
+
+SetEnv LD_LIBRARY_PATH /home/tgolden/lib
+SetEnv PYTHONPATH /home/tgolden/python-site-packages
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^static/.*$ - [L]
+RewriteRule ^robots.txt$ - [L]
+RewriteRule ^weekdaymasses-win32.cgi/robots.txt$ - [F,L]
+RewriteRule ^weekdaymasses-win32.cgi/favicon.ico$ - [F,L]
+
+#
+# Try to disguise from the user the fact
+# that we're using a cgi. Since there are links
+# already out there, continue to support the explicit
+# .cgi, and For historical purposes, support qmass as well.
+#
+RewriteRule ^qmass(.*) weekdaymasses-win32.cgi$1
+RewriteRule ^weekdaymasses-win32.cgi/.*$ - [L]
+#
+# Anything else is prefixed by /weekdaymasses-win32.cgi/
+#
+RewriteRule ^(.*)$ weekdaymasses-win32.cgi/$1 [L]

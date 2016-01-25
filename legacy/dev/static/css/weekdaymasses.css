@@ -1,0 +1,356 @@
+body {
+  font-family : "Book Antiqua", serif;
+  /* line-height : 1.25em; */
+}
+H1 {
+  font-family : Tahoma, Arial, Helvetica, sans-serif;
+}
+H2 {
+  font-family : Tahoma, Arial, Helvetica, sans-serif;
+  margin-top : 0.25em;
+  margin-bottom : 0.25em;
+}
+H3 {
+  font-family : Tahoma, sans-serif
+; margin-bottom : 0
+; background : #0080FF
+; color : #FFFFFF
+; border-top : solid black medium
+}
+a {
+  font-family : Verdana, Arial, Helvetica, sans-serif;
+  font-size : 84%;
+}
+
+.notes {
+  font-size : 84%;
+}
+
+table#hdos {
+  border : thin solid black;
+  margin-top : 1em;
+  margin-bottom : 1em;
+}
+table#hdos thead {
+  background-color : black;
+  color : white;
+  font-family : Tahoma, sans-serif;
+  font-size : 92%;
+}
+table#hdos th {
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+}
+table#hdos td {
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+}
+
+table.by-time {
+  width : 72%;
+}
+table.by-time tr.header {
+  background : #0080FF;
+  font-family : Tahoma, sans-serif;
+  font-weight : bold;
+  font-size : 112%;
+  color : #FFFFFF;
+}
+table.by-time td.distance {
+  padding-left : 0.25em;
+}
+table.by-time td.junction {
+  padding-left : 0.25em;
+}
+table.by-time td.transport {
+  padding-left : 0.25em;
+}
+table.by-time tr.header td {
+  border-top : solid black thin;
+}
+
+table.by-time td.restrictions {
+}
+table.by-time td.church {
+  padding-right : 1em;
+}
+table.by-time td.distance {
+  font-size : 84%;
+}
+table.by-time td.junction {
+  font-size : 84%;
+}
+table.by-time td.transport {
+  font-size : 84%;
+}
+
+P.details, P#languages, P.address, P.telephone, P.transport {
+; margin-left : 0.5em
+; margin-top : 0
+; margin-bottom : 0
+}
+/*
+p#languages {
+  font-family : Verdana, Arial, Helvetica, sans-serif;
+  font-size : 84%;
+}
+*/
+P.last_updated_on {
+  font-size : 84%;
+  font-style : italic;
+  font-weight : bold;
+  margin : 0.5em 0 0 0;
+}
+P.directions {
+  margin-left : 0.5em
+; margin-top : 0
+; margin-bottom : 0
+; font-size : 72%
+; font-style : italic
+}
+P.times {
+  font-family : "Book Antiqua", serif
+; margin-top : 0
+; margin-bottom : 0
+; font-weight : bold
+}
+p.confessions {
+  font-family : "Book Antiqua", serif;
+  margin-top : 0.5em;
+  margin-bottom : 0.25em;
+}
+P.sub-head {
+  font-family : "Verdana", Arial, sans-serif;
+  font-size : 60%
+}
+P.small-footer {
+  font-family : "Verdana", Arial, sans-serif;
+  font-size : 84%
+}
+P.bookmark {
+  font-family : "Verdana", Arial, sans-serif;
+  font-size : 60%;
+}
+P.whatsnew_date {
+  font-family : "Verdana", Arial, sans-serif
+; font-size : 108%
+; font-weight : bold
+}
+P.restrictions {
+  font-family : "Verdana", Arial, Helvetica, sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+  background : #660000;
+  color : #ffffcc;
+  text-align : right;
+  margin-top : 0;
+  margin-bottom : 0;
+}
+div.area-tree p {
+  line-height : 1.32em;
+  margin-top : 2px;
+  margin-bottom : 2px;
+}
+P.tree0 {
+  font-family : "Verdana", Arial, Helvetica, sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+  color : #660000;
+  margin-left : 2em;
+  margin-top : 0.75em;
+  margin-bottom : 0;
+}
+P.tree1 {
+  font-family : "Verdana", Arial, Helvetica, sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+  color : #660000;
+  margin-left : 4em;
+  margin-top : 0;
+  margin-bottom : 0;
+}
+P.tree2 {
+  font-family : "Verdana", Arial, Helvetica, sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+  color : #660000;
+  margin-left : 6em;
+  margin-top : 0;
+  margin-bottom : 0;
+}
+P.tree3 {
+  font-family : "Verdana", Arial, Helvetica, sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+  color : #660000;
+  margin-left : 8em;
+  margin-top : 0;
+  margin-bottom : 0;
+}
+P.tree4 {
+  font-family : "Verdana", Arial, Helvetica, sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+  color : #660000;
+  margin-left : 10em;
+  margin-top : 0;
+  margin-bottom : 0;
+}
+P.instructions {
+  margin-top : 0.25em;
+  margin-bottom : 0.25em;
+  font-weight : bold;
+  font-size : 108%;
+}
+a.external {
+  background : transparent url(../images/external.gif) no-repeat center right;
+  padding-right : 18px;
+}
+a.map_link {
+  background : #ffcccc;
+  font-size : 84%;
+}
+a.church_link {
+  font-size : 84%;
+}
+.description {
+  font-size : 72%;
+}
+
+span.label {
+  font-weight : bold;
+  font-size : 96%;
+}
+span.current {
+  font-weight : bold;
+}
+
+.warning {
+  font-weight : bold;
+  border : thin solid red;
+  padding : 0.25em;
+}
+
+.error {
+  font-weight : bold;
+  color : red;
+}
+
+label {
+	font-weight : bold;
+	margin-right : 1em;
+}
+
+body ul {
+  margin-top : 0;
+  padding-top : 0;
+}
+
+form.search {
+  display : inline;
+}
+
+.links form.search {
+  border-left : thin solid black;
+  padding-left : 0.5em;
+}
+
+.breadcrumbs {
+  font-size : 85%;
+}
+
+div#content div {
+  margin : 0;
+  padding : 0.5em;
+}
+
+div#worldwide {
+  width : 50%;
+}
+
+div#gb {
+  float : right;
+  width : 50%;
+}
+
+div#search {
+  width : 50%;
+}
+
+table#content {
+  border-collapse : collapse;
+  margin-top : 1em;
+  margin-bottom : 1em;
+}
+table#content td {
+  padding : 0.5em;
+  border : 1px solid #333;
+  vertical-align : top;
+}
+
+div#header, div#footer {
+  margin-top : 1em;
+  margin-bottom : 1em;
+}
+
+div.highlight {
+  border : thin dotted red;
+  background : #eee;
+  padding : 0.5em;
+  margin-top : 0.5em;
+  margin-bottom : 0.5em;
+}
+
+div.tooltip {
+  background-color : white;
+  border : 1px dotted black;
+  padding : 0.5em;
+  font-family : sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+  width : 20em;
+}
+
+.links {
+  margin-left : 0.5em;
+  border : none;
+  padding : none;
+  font-family : Verdana, Arial, sans-serif;
+  font-weight : bold;
+  font-size : 84%;
+}
+.links a.internal {
+  background-color : white;
+  color : blue;
+  border : 1px solid blue;
+  text-decoration : none;
+  padding : 0.25em;
+  margin-right : 0.25em;
+}
+.links a.internal:hover {
+  background-color : blue;
+  color : white;
+}
+.links a.internal:visited {
+  background-color : white;
+  color : purple;
+}
+.links a.internal:visited:hover {
+  background-color : purple;
+  color : white;
+}
+
+div.church:target {
+  background-color : yellow;
+}
+
+p.switch-language {
+  padding : 0.25em;
+  margin : 0.5em 2em;
+  border : thin solid black;
+  background-color : #ffff80;
+  color : red;
+  font-weight : bold;
+  text-align : center;
+}
+

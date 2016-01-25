@@ -1,0 +1,29 @@
+* Install Apache in the usual way
+
+* git init; git add .; git commit -m "Initial state"
+
+* Include extra/httpd-vhosts.conf
+
+* In extra/httpd-vhosts.conf, create a default and an entry like so:
+
+<VirtualHost *:80>
+    DocumentRoot "C:/Users/tim/work-in-progress/weekdaymasses.org.uk/branches/mapsv3"
+    ServerName "local.weekdaymasses.org.uk"
+    ErrorLog "logs/weekdaymasses.log"
+    CustomLog "logs/weekdaymasses.log" common
+</VirtualHost>
+
+* In httpd.conf, uncomment mod_vhost_alias.so and mod_rewrite.so
+
+* Add a directory entry for weekdaymasses, like so:
+
+<Directory "C:/Users/tim/work-in-progress/weekdaymasses.org.uk/branches/mapsv3">
+    Options Indexes FollowSymLinks ExecCGI
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
+* Look for "AddHandler cgi-script .cgi" and enable it
+
+That's it, unless I've forgotten something

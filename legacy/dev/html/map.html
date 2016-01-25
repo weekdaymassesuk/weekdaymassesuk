@@ -1,0 +1,161 @@
+<div id="map-controls">
+  <p id="relocation-form" class="controls">
+    {{map_relocate_new}}&nbsp;<input type="text" id="location" value="London" size="40"/>
+    <input type="hidden" id="threshold" value="{{map_threshold}}" size="3" />
+    <input type="submit" name="submit" id="submit" value="{{map_relocate_refresh_button}}" />
+    <input type="submit" name="submit-here" id="submit-here" value="{{map_relocate_here_button}}" />
+  </p>
+  <p class="links" id="map-links">
+    <a id="permalink" class="internal">{{map_links_permalink}}</a>
+    <a id="text-site" class="internal" href="/{{language}}/main">{{map_links_text_site}}</a>
+    <a id="contact" class="internal" href="/{{language}}/intouch">{{map_links_contact}}</a>
+    <a href="#" id="get-help" class="internal">{{map_links_help}}</a>
+  </p>
+</div>
+
+<!--div id="choices"></div-->
+
+<div id="map-body">
+
+  <div id="map" title="This is a Google map. Left-click-drag will slide it around, scrollwheel will zoom. Red pins show church and mass details. Blue pins take you to the church's website.">
+  </div>
+
+  <div id="info">
+    <p id="status"></p>
+
+    <table id="dayofweek" class="controls" cellspacing="0">
+      <tr>
+        <td class="day selected" id="K">{{map_days_weekdays}}</td>
+        <td class="day" id="A">{{map_days_saturdays}}</td>
+        <td class="day" id="U">{{map_days_sundays}}</td>
+        <td class="day" id="H">{{map_days_hdos}}</td>
+      </tr>
+    </table>
+
+    <table id="timeofday" class="controls" cellspacing="0">
+      <tr class="K A">
+        <td class="null"></td>
+        <td class="segment" data-segment="am" data-tod="am" colspan="6">{{timeofday_am}}</td>
+        <td class="segment" data-segment="pm" data-tod="pm" colspan="10">{{timeofday_pm}}</td>
+      </tr>
+      <tr class="U H">
+        <td class="null"></td>
+        <td class="segment" data-segment="eve" data-tod="eve" colspan="3">{{timeofday_eve}}</td>
+        <td class="segment" data-segment="am" data-tod="am" colspan="6">{{timeofday_am}}</td>
+        <td class="segment" data-segment="pm" data-tod="pm" colspan="10">{{timeofday_pm}}</td>
+      </tr>
+
+      <tr class="K A">
+        <td class="segment" data-segment="time" data-tod="anytime">{{timeofday_any}}</td>
+        <td class="time early am selected" data-tod="1-06" data-timeofday="1-0000:1-0654">6</td>
+        <td class="time early am selected" data-tod="1-07" data-timeofday="1-0655:1-0754">7</td>
+        <td class="time early am selected" data-tod="1-08" data-timeofday="1-0755:1-0854">8</td>
+        <td class="time am" data-tod="1-09" data-timeofday="1-0855:1-0954">9</td>
+        <td class="time am" data-tod="1-10" data-timeofday="1-0955:1-1054">10</td>
+        <td class="time am" data-tod="1-11" data-timeofday="1-1055:1-1154">11</td>
+        <td class="time pm lunch selected" data-tod="1-12" data-timeofday="1-1155:1-1254">12</td>
+        <td class="time pm lunch selected" data-tod="1-13" data-timeofday="1-1255:1-1354">1</td>
+        <td class="time pm" data-tod="1-14" data-timeofday="1-1355:1-1454">2</td>
+        <td class="time pm" data-tod="1-15" data-timeofday="1-1455:1-1554">3</td>
+        <td class="time pm" data-tod="1-16" data-timeofday="1-1555:1-1654">4</td>
+        <td class="time pm late selected" data-tod="1-17" data-timeofday="1-1655:1-1754">5</td>
+        <td class="time pm late selected" data-tod="1-18" data-timeofday="1-1755:1-1854">6</td>
+        <td class="time pm late selected" data-tod="1-19" data-timeofday="1-1855:1-1954">7</td>
+        <td class="time pm late selected" data-tod="1-20" data-timeofday="1-1955:1-2054">8</td>
+        <td class="time pm late selected" data-tod="1-21" data-timeofday="1-2055:1-2359">9</td>
+      </tr>
+      <tr class="U H">
+        <td class="segment" data-segment="time" data-tod="anytime">{{timeofday_any}}</td>
+        <td class="time eve selected" data-tod="0-17" data-timeofday="0-1200:0-1754">5</td>
+        <td class="time eve selected" data-tod="0-18" data-timeofday="0-1755:0-1854">6</td>
+        <td class="time eve selected" data-tod="0-19" data-timeofday="0-1855:0-2359">7</td>
+        <td class="time am selected" data-tod="1-06" data-timeofday="1-0000:1-0654">6</td>
+        <td class="time am selected" data-tod="1-07" data-timeofday="1-0655:1-0754">7</td>
+        <td class="time am selected" data-tod="1-08" data-timeofday="1-0755:1-0854">8</td>
+        <td class="time am selected" data-tod="1-09" data-timeofday="1-0855:1-0954">9</td>
+        <td class="time am selected" data-tod="1-10" data-timeofday="1-0955:1-1054">10</td>
+        <td class="time am selected" data-tod="1-11" data-timeofday="1-1055:1-1154">11</td>
+        <td class="time pm selected" data-tod="1-12" data-timeofday="1-1155:1-1254">12</td>
+        <td class="time pm selected" data-tod="1-13" data-timeofday="1-1255:1-1354">1</td>
+        <td class="time pm" data-tod="1-14" data-timeofday="1-1355:1-1454">2</td>
+        <td class="time pm" data-tod="1-15" data-timeofday="1-1455:1-1554">3</td>
+        <td class="time pm" data-tod="1-16" data-timeofday="1-1555:1-1654">4</td>
+        <td class="time pm selected" data-tod="1-17" data-timeofday="1-1655:1-1754">5</td>
+        <td class="time pm selected" data-tod="1-18" data-timeofday="1-1755:1-1854">6</td>
+        <td class="time pm selected" data-tod="1-19" data-timeofday="1-1855:1-1954">7</td>
+        <td class="time pm selected" data-tod="1-20" data-timeofday="1-1955:1-2054">8</td>
+        <td class="time pm selected" data-tod="1-21" data-tod="1-21" data-timeofday="1-2055:1-2359">9</td>
+      </tr>
+      <tr class="K A">
+        <td class="null"></td>
+        <td class="segment" data-segment="early" data-tod="early" colspan="3">{{timeofday_early}}</td>
+        <td class="null" colspan="3"></td>
+        <td class="segment" data-segment="lunch" data-tod="lunch" colspan="2">{{timeofday_lunch}}</td>
+        <td class="null" colspan="3"></td>
+        <td class="segment" data-segment="late" data-tod="late" colspan="5">{{timeofday_late}}</td>
+      </tr>
+    </table>
+
+    <p id="text-view"></p>
+    <div id="timetable"></div>
+    <div id="help">
+    <p><b>[Text site]</b><br>
+    Click here to revert to the previously used style of
+    displaying Mass time information i.e. via a menu approach
+    </p>
+
+    <p>
+    <b>[Link to this page]</b><br>
+    Click here in order to display what link should be
+    used to access the currently displayed map area. This could be
+    used to send a link to someone else or to bookmark the most
+    useful area.
+    </p>
+
+    <p><b>New Location</b><br>
+    Enter a place name or post code information to redisplay the
+    map around that location.
+    </p>
+
+    <p>
+    <b>Red 'pins'</b><br>
+    Show the location of the churches for which Mass time
+    information is shown. Clicking on one of these pins will reveal more
+    information regarding the church.
+    </p>
+
+    <p>
+    <b>Grey 'pins'</b><br>
+    Show the location of the churches for which no Mass is available
+    at the times shown on the right. Clicking on one of these pins will
+    reveal more information regarding the church.
+    </p>
+
+    <p>
+    <b>Blue 'pins'</b><br>
+    Show other churches for which Mass information is available
+    for another website (i.e. external to weekdaymasses.org.uk). Click on
+    the blue 'pin' and the relevant church's webpage will be opened within
+    a new widow.
+    </p>
+
+    <p>
+    <b>Weekdays / Saturdays / Sundays / HDOs [Holy Days of Obligation]</b><br>
+    Click on
+    the relevant box to display Mass times for churches within the area
+    displayed by the current map<br>
+    Click on a specific church row (within a particular Mass time) and the
+    relevant red 'pin' will change to yellow.
+    </p>
+
+    <p><b>Times of Day</b><br>
+    Select one or more hours to display only masses at those times.
+    The wider spread of hours are a convenience for selecting common
+    times of day with one click. Churches without masses within these
+    times are greyed-out on the map.
+    </p>
+
+    </div>
+  </div>
+
+</div>

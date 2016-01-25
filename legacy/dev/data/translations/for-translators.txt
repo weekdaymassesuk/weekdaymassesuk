@@ -1,0 +1,67 @@
+The way weekdaymasses.org.uk is translated is very simple. We have a database
+of churches, the areas they're in, the times of their masses and various other
+pieces of information.  To present all that data, we include it in a web page
+surrounded by some text which tells the website user what the data is about and
+what to do: "This is a list of Weekday Masses in East Anglia" or "Click below".
+Each of those pieces of text quoted above is represented by a short keyphrase:
+area_weekday_masses or general_click_below. This keyphrase has a translation
+into each of the languages we offer -- including English. 
+
+In some cases, the translation is straightforward. "Click below" doesn't need
+anything other than presenting text of the same meaning in Portuguese, French
+etc. In other cases, such as the "This is a list..." text above, certain of the
+words will depend on what the website user has selected. So they may be looking
+at a list of Sunday Masses in East Anglia, or Weekday Masses in Kent. In that
+case, the translation needs to leave room for the words which will change. The
+placeholders for those changing words are surrounded by curly brackets:
+
+  This is a list of {{day}} Masses in {{area}}
+
+The text inside the curly brackets *should not be translated*. The only thing a
+translator should do is to move the curly brackets around so that the
+corresponding piece of data ("Sunday", "East Anglia") will fall in the correct
+place in the sentence structure.
+
+The other oddity you will come across is text surrounded by square brackets:
+
+  Select from a list of Masses by [GB Postcode]
+
+The text inside the square brackets will become a link for the user to click
+on to take them to the appropriate page. Therefore, the text inside the
+square brackets *should be translated* although it may be necessary to
+change exactly which text is bracketed according to a particular language.
+
+Finally, a note on the .xls files. Each language has is own .xls file called
+translations.<ll>.xls where <ll> is the two-letter abbreviation for that
+language. The .xls has only one sheet, also named for the language's two-letter
+abbreviation. The program which extracts the translations only cares about the
+first two columns: anything after that can be used for notes, for keeping the
+English translation or simply left blank.
+
+I've used the .xls format because it's widely readable/writeable and -- and this
+is a key point -- because it makes character set issues easier to handle. That
+said, I can work with absolutely any data format you can provide. If it's easier
+for you to produce a Word document or an Open Office ODT file or a text file from
+notepad or an HTML file -- I can transform it very easily into the format I need.
+
+Let me say this quite clearly: if you any difficulties in doing this (apart from
+actual translation where I probably can't help!) make it my problem. I can overcome
+pretty much any technical / format problem you care to throw at me far more easily
+that you can, so if there are technical or operational difficulties don't get
+bogged down by them: just throw them back at me. I'm immensely grateful to you
+for helping out in this way, and I'll do whatever it takes to make your path
+smoother.
+
+The current version of your translation will always be available at:
+
+  http://svn.weekdaymasses.org.uk/trunk/data/translations/translations.<ll>.xls
+
+and I'll normally upload your latest translation to:
+
+  http://dev.weekdaymasses.org.uk/
+
+(note the dev subdomain) for you to go over and check in situ before
+we push them live. On that site, you can also see the "raw" language.
+This is a pseudo language which, if you select it, shows you the
+keyphrases -- the ones you're translating against -- which underly
+the website. 

@@ -1,0 +1,206 @@
+div#map-controls {
+  position : relative;
+  height : 2em;
+}
+div#map-controls p#relocation-form {
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  margin : 0;
+  padding : 0;
+}
+div#map-controls p#map-links {
+  position : absolute;
+  right : 0;
+  bottom : 0;
+  margin : 0;
+  padding : 0;
+}
+#submit-here {
+	background-color : red;
+	color : white;
+	font-weight : bold;
+}
+
+.controls {
+  font-family : sans-serif;
+  font-size : 84%;
+  font-weight : bold;
+}
+
+table.controls {
+  padding : 0;
+  margin : 0;
+  border-collapse : collapse;
+  cursor : pointer;
+}
+
+table.controls td {
+  width : 9%;
+  text-align : center;
+  border : thin solid black;
+  margin : 0;
+  padding : 0.25em;
+}
+table.controls td.null {
+  cursor : default;
+  border : none;
+}
+
+#timeofday {
+  width : 100%;
+  margin-top : 0.25em;
+  border-collapse : collapse;
+}
+#timeofday tr {
+  display : none;
+}
+#timeofday tr.k {
+  display : default;
+}
+#timeofday .selected {
+  /* Same as div.timecode h2 */
+  background-color : #4848ff;
+  color : white;
+}
+#timeofday td {
+  width : 2em;
+}
+
+input#location {
+  font-weight : bold;
+}
+
+div#map-body {
+  margin-top : 0.75em;
+  padding-top : 0.75em;
+  border-top : thin dotted grey;
+}
+div#map {
+  width: 60%;
+  height : 560px;
+  float : left;
+  display : inline;
+  margin : 0;
+  border : thin double black;
+}
+
+div#info {
+  float : right;
+  display : inline;
+  width : 36%;
+  padding : 0;
+}
+
+div#timetable {
+  margin : 1em 0 1em 0;
+}
+
+div.timecode {
+  margin : 0;
+  padding : 0;
+  margin-bottom : 1em;
+  background-color : #eee;
+}
+
+div.timecode h2 {
+  background-color : #4848ff;
+  color : white;
+  margin : 0;
+  padding-left : 0.25em;
+  font-size : 100%;
+}
+
+table.times {
+  width : 100%;
+  border-spacing : 0;
+  cursor : pointer;
+  border-left : thin dotted grey;
+  border-right : thin dotted grey;
+}
+
+table.times td {
+  font-size : 84%;
+  border-bottom : thin dotted grey;
+}
+
+td.church-id {
+  display : none;
+}
+
+td.restrictions {
+  width : 6em;
+  padding-right : 1em;
+  text-align : right;
+  font-weight : bold;
+}
+
+p#status {
+  margin-top : 0;
+  padding : 0.25em;
+  border : thin solid grey;
+}
+
+p#status.warning {
+  border-color : #ff0000;
+  background-color : #ff8000;
+  color : #ffff80;
+}
+
+p#status.info {
+  border-color : black;
+  background-color : green;
+  color : white;
+  font-weight : bold;
+}
+
+.selected {
+  background-color : black;
+  color : white;
+}
+
+hr {
+  clear : both;
+}
+
+.highlighted {
+  background-color : #ff0;
+  font-weight : bold;
+}
+
+div.popup {
+  font-size : 84%;
+}
+div.popup p {
+  margin-top : 0;
+  margin-bottom : 0;
+  padding-top : 0;
+  padding-bottom : 0;
+}
+div.popup p.report-corrections {
+  margin-top : 0.5em;
+}
+div.popup h3 {
+  font-size : 92%;
+  padding-left : 0.5em;
+  margin-bottom : 0.25em;
+}
+p.times {
+  font-weight : normal;
+}
+
+p#permalink {
+  font-size : 64%;
+  font-weight : bold;
+  font-family : sans-serif;
+}
+
+div#help {
+  display : none;
+  font-size : 84%;
+}
+
+div#choices {
+  display : none;
+}
+

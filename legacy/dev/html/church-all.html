@@ -1,0 +1,33 @@
+<div class="popup">
+  <h3>{{church.name}}{% if church.alias %} ({{church.alias}}) {% endif %}</h3>
+  {%- if church.address or church.x_coord or church.latitude or church.map_link %}
+    <p>
+    {% if church.address %}
+      {{church.address}}{% if church.postcode and church.postcode != 'XXX' %}, {{church.postcode}} {% endif %}
+    {% endif %}
+    </p>
+  {% endif -%}
+
+  {% if church.phone %} <p><span class="label">{{label_phone}}:</span> {{church.phone}}</p> {% endif %}
+  {% if church.public_transport %} <p><span class="label">{{label_station}}:</span> {{church.public_transport}}</p> {% endif %}
+
+  <hr />
+
+  {% for day in days %}
+    {% if times[day.code] %}
+    <p class="times"><b>{{day | day_format}}</b>:
+      {% for time in times[day.code] %}
+        {{time | masstime_format}}{% if not loop.last %},{% endif %}
+      {% endfor %}
+      </p>
+    {% endif %}
+  {% endfor %}
+
+  <p class="last_updated_on">
+    {% if church.website %}<a class="external" href="http://{{church.website}}">{{label_website}}</a><br/>{% endif %}
+    {% if church.last_updated_on %}{{general_last_updated_on}} {{church.last_updated_on | date_format}}&nbsp;|&nbsp;{% endif %}
+    <a href="{{url}}/{{language}}/intouch?subject={{name.encode ('utf-8') | urlquote}}+{{'[%s]' % church.postcode if (church.postcode and church.postcode != 'XXX') else '' | urlquote}}">
+      {{general_report_corrections}}
+    </a>
+  </p>
+</div>

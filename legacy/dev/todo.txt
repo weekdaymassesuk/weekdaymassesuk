@@ -1,0 +1,13 @@
+BUGS
+----
+
+REQUIRED
+--------
+* Translate Help text on maps page
+
+NICE-TO-HAVE
+------------
+* <Return> in location field
+* Symbols for dow on timetables panel
+* Legend
+* Varying background colours for languages
